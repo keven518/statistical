@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>统计分析</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="/css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="/css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+
+    <script src="/js/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    
+                    
+                    <div class="navbar nav_logo">
+                    	<div class="nav_logo_xiao"></div><span class="nav_logo_tit">汇道服务统计平台</span><i class="nav_out fa fa-sign-out"></i>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li class="nav_active"><i class="fa fa-cubes"></i><span class="nav_active_txt nav_tow">总揽</span><span class="fa fa-angle-right"></span>
+                                </li>
+                                <li><a href="distributorsIndex"><i class="fa fa-user"></i><span class="nav_active_txt">开发商</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                <li><a href="service"><i class="fa fa-paste"></i><span class="nav_active_txt nav_tow">服务</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    
+                </div>
+            </div>
+
+            
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                <!-- top tiles -->
+                <div class="row tile_count">
+                    <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top"> 全部服务</span>
+                            <div class="count txt_align_c"></div>
+                            <span class="count_bottom">
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">今日</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">本周</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">当月</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top"> 服务使用</span>
+                            <div class="count txt_align_c"></div>
+                            <span class="count_bottom">
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">今日</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">本周</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">当月</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top">开发商</span>
+                            <div class="count txt_align_c"></div>
+                            <span class="count_bottom">
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">今日</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">本周</span>
+                            <i class="red i_box"><i class="fa fa-sort-asc"></i></i><span class="p_r_10">当月</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                </div>
+                
+                <!--f1-->
+                <div class="row">
+                	<div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="dashboard_graph x_panel">
+
+                            <div class="x_title">
+                             <h2>调用频次</h2><div class="dropdown pull-right">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="kv_select_txt">
+    按月统计</span>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu kv_select" id="dm1" aria-labelledby="dropdownMenu1">
+    <li data='0'>按月统计</li>
+    <li data='1'>按年统计</li>
+  </ul>
+</div>
+                   		    <div class="clearfix"></div>
+                            </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div id="placeholder33" style="height: 240px; display: none" class="demo-placeholder"></div>
+                                <iframe id='if_1' src="freForMonth" width="100%" height="237" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                            
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    </div>
+                	<div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="x_panel tile" style="height:320px;">
+                            <div class="x_title">
+                                <h2>响应时间</h2>
+                   		    <div class="clearfix"></div>
+                            </div>
+                            
+                   		    <div class="clearfix"></div>
+                            <div class="x_content">
+
+                                <table class="" style="width:100%">
+                                    <tr>
+                                        <th style="width:37%;">
+                                            <p>图列</p>
+                                        </th>
+                                        <th>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                <p class="">状态</p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="">比例</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <canvas id="responseTime" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                                        </td>
+                                        <td>
+                                            <table class="tile_info">
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square green"></i>0-5s 快速</p>
+                                                    </td>
+                                                    <td>35%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square blue_k3"></i>6-10s 正常</p>
+                                                    </td>
+                                                    <td>35%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square blue_k2"></i>10-20s 慢速</p>
+                                                    </td>
+                                                    <td>15%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square gray_k2"></i>21s+ 故障</p>
+                                                    </td>
+                                                    <td>35%</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                     </div>
+                     
+                     </div>
+
+                </div>
+                <!--/f1-->                <!-- /top tiles -->
+
+                
+                <br />
+				
+                <!--f2-->
+              <div class="row">
+
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_320 overflow_hidden">
+                            <div class="x_title">
+                                <h2>调用状态</h2>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <table class="" style="width:100%">
+                                    <tr>
+                                        <th style="width:37%;">
+                                            <p>图列</p>
+                                        </th>
+                                        <th>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                <p class="">状态</p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="">比例</p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <canvas id="useState" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                                        </td>
+                                        <td>
+                                            <table class="tile_info">
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square green"></i>成功 </p>
+                                                    </td>
+                                                    <td>80%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square blue_k2"></i>失败 </p>
+                                                    </td>
+                                                    <td>20%</td>
+                                                </tr>
+                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_320">
+                            <div class="x_title">
+                                <h2>服务排名（/次）</h2>
+                                <div class="dropdown pull-right">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="kv_select_txt">
+    按月统计</span>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu kv_select" id="dm2" aria-labelledby="dropdownMenu2">
+    <li>按日统计</li>
+    <li>按年统计</li>
+  </ul>
+</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>Top 5</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>医药云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>健康云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>市民云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>教育云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_320">
+                            <div class="x_title">
+                                <h2>开发商排名（/次）</h2>
+                                <div class="dropdown pull-right">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="kv_select_txt">
+    按月统计</span>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu kv_select" id="dm3" aria-labelledby="dropdownMenu3">
+    <li>按日统计</li>
+    <li>按年统计</li>
+  </ul>
+</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>Top 5</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>医药云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>健康云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>市民云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>教育云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/f2-->
+
+
+
+
+
+
+              </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- chart js -->
+    <script src="js/Chart.js"></script>
+    <!-- bootstrap progress js -->
+    
+    <script>
+        $(function () {
+            
+			
+			/***下拉**/
+			
+			
+			/**ajax**/
+			$.getJSON('http://www.51zovan.com/json/jsonp2.php?callback=?', function (response) {
+				var res = response[0];
+				var _nodes = $('.tile_stats_count');
+				$.each( _nodes, function(i, n){
+				  $(n).find('.txt_align_c').text(res.top[i].Num);
+				  $(n).find('.i_box').eq(0).html('<i class="fa fa-sort-asc"></i>'+res.top[i].Day+'%');
+				  $(n).find('.i_box').eq(1).html('<i class="fa fa-sort-asc"></i>'+res.top[i].Weeks+'%');
+				  $(n).find('.i_box').eq(2).html('<i class="fa fa-sort-asc"></i>'+res.top[i].Month+'%');
+				});
+				
+				/**曲线图**/
+
+    
+    $('#dm1').find('li').click(function(){
+        var _txt = $(this).text();
+        $(this).parent().prev().find('.kv_select_txt').text(_txt);
+        
+        if(_txt == '按月统计'){
+            $('#if_1').attr('src','freForMonth');
+        }else{
+            $('#if_1').attr('src','freForYears');
+        }
+    });
+
+
+            
+
+				/**曲线图end**/
+				/**相应时间**/
+				 var doughnutData = [
+            {
+                value: res.response.first,
+                color: "#2F86D6"
+            },
+            {
+                value: res.response.second,
+                color: "#B1B6BC"
+            },
+            {
+                value: res.response.third,
+                color: "#344860"
+            },
+            {
+                value: res.response.fourth,
+                color: "#31AE86"
+            }
+    		];
+        	var myDoughnut = new Chart(document.getElementById("responseTime").getContext("2d")).Doughnut(doughnutData);
+			/**相应时间end**/
+			
+			/**调用状态**/
+			 var doughnutData = [
+            {
+                value: res.state.successful,
+                color: "#31AE86"
+            },
+            {
+                value: res.state.failure,
+                color: "#364A62"
+            }
+    ];
+        var myDoughnut = new Chart(document.getElementById("useState").getContext("2d")).Doughnut(doughnutData);
+			/**调用状态end**/
+			
+				
+			});
+			
+			/**ajax end**/
+    /**ajax2 begin**/
+    $.getJSON('http://www.51zovan.com/json/getServiceCount.php?callback=?', function (response) {
+        var res = response[0];
+        if(res.success==1){
+
+        }else{
+            alert("错误信息："+res.message);
+        }
+    })
+    /**ajax2 end**/
+    /**ajax3 begin**/
+    $.getJSON('http://www.51zovan.com/json/jsonp2.php?callback=?', function (response) {})
+    /**ajax3 end**/
+    /**ajax4 begin**/
+    $.getJSON('http://www.51zovan.com/json/jsonp2.php?callback=?', function (response) {})
+    /**ajax4 end**/
+    /**ajax5 begin**/
+    $.getJSON('http://www.51zovan.com/json/jsonp2.php?callback=?', function (response) {})
+    /**ajax5 end**/
+        });
+    </script>
+    
+
+</body>
+
+</html>

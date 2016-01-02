@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>统计分析</title>
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+<div style="width: 660px; height: 227px;">
+<div>
+<canvas id="statistical1" width="660" height="227"></canvas>
+</div>
+ </div>   
+
+
+    <script src="js/Chart.js"></script>
+    
+    <script>
+        $(function () {
+            
+			
+			/***下拉**/
+			
+			
+			/**ajax**/
+			$.getJSON('getUsedCount_freForYears', function (res) {
+				
+				
+				/**曲线图**/
+
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var labels = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    var data = [0,0,0,0,0,0,0,res.result[0].count,res.result[1].count,res.result[2].count,21,80];
+    var lineChartData = {
+        labels : labels,
+        datasets : [
+        {
+            label: "My First dataset",
+            fillColor : "rgba(220,220,220,0.2)",
+            strokeColor : "rgba(220,220,220,1)",
+            pointColor : "rgba(220,220,220,1)",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "#fff",
+            pointHighlightStroke : "rgba(220,220,220,1)",
+            data : data
+        }
+        ]
+
+    };
+    $("#statistical1").css('height','100px');
+    var ctx =   $("#statistical1")[0].getContext("2d");
+    
+    window.myLine = new Chart(ctx).Line(lineChartData, {
+        responsive: true
+    });
+    
+            
+
+				/**曲线图end**/
+				
+				
+			});
+			
+			/**ajax end**/
+        });
+    </script>
+    <!-- skycons -->
+   
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>统计分析</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="css/button.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.min.js"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    
+                    
+                    <div class="navbar nav_logo">
+                        <div class="nav_logo_xiao"></div><span class="nav_logo_tit">汇道服务统计平台</span><i class="nav_out fa fa-sign-out"></i>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a href="index"><i class="fa fa-cubes"></i><span class="nav_active_txt nav_tow">总览</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                <li class="nav_active"><i class="fa fa-user"></i><span class="nav_active_txt">开发商</span><span class="fa fa-angle-right"></span>
+                                </li>
+                                <li><a href="service"><i class="fa fa-paste"></i><span class="nav_active_txt nav_tow">服务</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2><span><a href="distributorsIndex">开发商</a> > </span><a href="distributors">服务列表</a></h2>
+                                    <div class="title_right">
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right top_search">
+                                    <div class="input-group">
+                                    <input type="text" class="form-control2" placeholder="请输入关键字">
+                                    <span class="input-group-btn kv_btn">
+                            <button class="btn btn-default" type="button"></button>
+                        </span>
+                                </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right">
+                                    <div class="form-group kv_form-group" style="width:100%;">
+                <div class="input-group date form_date_end col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control2" size="16" type="text" value="" readonly>
+                    
+                    <span class="input-group-addon kv_addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right">
+                                    <div class="form-group kv_form-group" style="width:100%;">
+                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control2" size="16" type="text" value="" readonly>
+                    
+                    <span class="input-group-addon kv_addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right">
+                                    <div class="form-group kv_form-group" style="width:100%">
+                                <select style="width:100%" class="select2">
+                                    <option />
+                                    <option value="AK" />Alaska
+                                    <option value="HI" />Hawaii
+                                    <option value="CA" />California
+                                    <option value="NV" />Nevada
+                                    <option value="OR" />Oregon
+                                    <option value="WA" />Washington
+                                    <option value="AZ" />Arizona
+                                    <option value="CO" />Colorado
+                                    <option value="ID" />Idaho
+                                    <option value="MT" />Montana
+                                    <option value="NE" />Nebraska
+                                    <option value="NM" />New Mexico
+                                    <option value="ND" />North Dakota
+                                    <option value="UT" />Utah
+                                    <option value="WY" />Wyoming
+                                    <option value="AL" />Alabama
+                                    <option value="AR" />Arkansas
+                                    <option value="IL" />Illinois
+                                    <option value="IA" />Iowa
+                                    <option value="KS" />Kansas
+                                    <option value="KY" />Kentucky
+                                    <option value="LA" />Louisiana
+                                    <option value="MN" />Minnesota
+                                    <option value="MS" />Mississippi
+                                    <option value="MO" />Missouri
+                                    <option value="OK" />Oklahoma
+                                    <option value="SD" />South Dakota
+                                    <option value="TX" />Texas
+                                    <option value="TN" />Tennessee
+                                    <option value="WI" />Wisconsin
+                                    <option value="CT" />Connecticut
+                                    <option value="DE" />Delaware
+                                    <option value="FL" />Florida
+                                    <option value="GA" />Georgia
+                                    <option value="IN" />Indiana
+                                    <option value="ME" />Maine
+                                    <option value="MD" />Maryland
+                                    <option value="MA" />Massachusetts
+                                    <option value="MI" />Michigan
+                                    <option value="NH" />New Hampshire
+                                    <option value="NJ" />New Jersey
+                                    <option value="NY" />New York
+                                    <option value="NC" />North Carolina
+                                    <option value="OH" />Ohio
+                                    <option value="PA" />Pennsylvania
+                                    <option value="RI" />Rhode Island
+                                    <option value="SC" />South Carolina
+                                    <option value="VT" />Vermont
+                                    <option value="VA" />Virginia
+                                    <option value="WV" />West Virginia
+                                </select>
+                                </div>
+                                    </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="x_content">
+
+                                    
+
+                                    <table class="table table-striped responsive-utilities jambo_table bulk_action">
+                                        <thead>
+                                            <tr class="headings">
+                                                <th class="column-title">服务名称</th>
+                                                <th class="column-title">创建时间</th>
+                                                <th class="column-title">联系人</th>
+                                                <th class="column-title">电话</th>
+                                                <th class="column-title">邮箱</th>
+                                                <th class="column-title">服务（总）次数</th>
+                                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>                                           </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+<tr class="even pointer">
+                                    
+                                    <td class=" "><a href="distributorsDetails">医疗服务<a></td>
+                                    <td class=" "><a href="distributorsDetails">2015-09-07<a></td>
+                                    <td class=" "><a href="distributorsDetails">金世纪<a></td>
+                                    <td class=" "><a href="distributorsDetails">13567899123<a></td>
+                                    <td class=" "><a href="distributorsDetails">jinshiji@wondersgroup.com<a></td>
+<td class=" "><a href="distributorsDetails">23456<a></td>    </tr>
+</tbody>
+
+                                    </table>
+                                </div>
+                                <span >共428条记录</span>
+<nav style="float:right;">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                            </div>
+                            
+                        </div>
+
+               
+                
+                
+
+
+
+
+
+
+              </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    
+    <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+            
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    
+    
+    
+
+    <!-- datepicker -->
+    
+    <!-- /datepicker -->
+    <!-- /footer content -->
+    <script type="text/javascript">
+    $(".form_date").datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $(".form_date_end").datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+</script> 
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>统计分析</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="css/button.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery.min.js"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    
+                    
+                    <div class="navbar nav_logo">
+                        <div class="nav_logo_xiao"></div><span class="nav_logo_tit">汇道服务统计平台</span><i class="nav_out fa fa-sign-out"></i>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a href="index"><i class="fa fa-cubes"></i><span class="nav_active_txt nav_tow">总览</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                <li class="nav_active"><i class="fa fa-user"></i><span class="nav_active_txt">开发商</span><span class="fa fa-angle-right"></span>
+                                </li>
+                                <li><a href="service"><i class="fa fa-paste"></i><span class="nav_active_txt nav_tow">服务</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    
+                </div>
+            </div>
+
+            
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2><a href="distributorsIndex">开发商</a></h2>
+                                    <div class="title_right">
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right top_search">
+                                    <div class="input-group">
+                                    <input type="text" class="form-control2" placeholder="请输入关键字">
+                                    <span class="input-group-btn kv_btn">
+                            <button class="btn btn-default" type="button"></button>
+                        </span>
+                                </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right kv_padding">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <div class="kv_cl1 xdisplay_inputx form-group has-feedback">
+                                                            <input type="text" class="form-control has-feedback-left" id="single_cal2" placeholder="选择日期" aria-describedby="inputSuccess2Status2">
+                                                            <span class="fa fa-calendar-o form-control-feedback kv_left" aria-hidden="true"></span>
+                                                            <span id="inputSuccess2Status2" class="sr-only">(success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right kv_padding">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <div class="kv_cl1 xdisplay_inputx form-group has-feedback">
+                                                            <input type="text" class="form-control has-feedback-left" id="single_cal1" placeholder="选择日期" aria-describedby="inputSuccess2Status2">
+                                                            <span class="fa fa-calendar-o form-control-feedback kv_left" aria-hidden="true"></span>
+                                                            <span id="inputSuccess2Status2" class="sr-only">(success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            </div>
+                                    
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="x_content">
+
+                                    
+
+                                    <table class="table table-striped responsive-utilities jambo_table bulk_action" id="kv_tab">
+                                        <thead>
+                                            <tr class="headings">
+                                                <th class="column-title">渠道商名称</th>
+                                                <th class="column-title">创建时间</th>
+                                                <th class="column-title">姓名</th>
+                                                <th class="column-title">电话</th>
+                                                <th class="column-title">邮箱</th>
+                                                <th class="column-title">渠道商id</th>
+                                                </tr>
+                            </thead>
+
+                            <tbody></tbody>
+
+                                    </table>
+                                </div>
+                                <span >共428条记录</span>
+<nav style="float:right;">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                            </div>
+                            
+                        </div>
+
+               
+                
+                
+
+
+
+
+
+
+              </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+     <script src="js/bootstrap.min.js"></script>
+
+    
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- daterangepicker -->
+    <script type="text/javascript" src="js/moment.min2.js"></script>
+    <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+    
+     <script type="text/javascript">
+     $(function(){
+        $('#single_cal1').daterangepicker({
+            singleDatePicker: true,
+            calender_style: "picker_2"
+        }, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+
+        $('#single_cal2').daterangepicker({
+            singleDatePicker: true,
+            calender_style: "picker_2"
+        }, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+
+        $.getJSON('kv_getChannelInfoList', function (res) {
+            if(res.msg == 'success'){
+                $.each( res.result, function(i,n){
+                  $('#kv_tab').find('tbody').append('<tr class="even pointer">\
+                                <td class=" "><a href="distributorsService">'+n.channelname+'</a></td>\
+                                <td class=" "><a href="distributorsService">'+n.createtime+'</a></td>\
+                                <td class=" "><a href="distributorsService">'+n.owner+'</a></td>\
+                                <td class=" "><a href="distributorsService">'+n.phone+'</a></td>\
+                                <td class=" "><a href="distributorsService">'+n.email+'</a></td>\
+                                <td class="a-right a-right "><a href="distributorsService">'+n.channeled+'</a></td>\
+                                        </tr>');
+                });
+            }else{
+                console.log(res.msg);
+            }
+        });
+     })
+ </script>    
+</body>
+
+</html>

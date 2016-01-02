@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>统计分析</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="css/button.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery.min.js"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    
+                    
+                    <div class="navbar nav_logo">
+                    	<div class="nav_logo_xiao"></div><span class="nav_logo_tit">汇道服务统计平台</span><i class="nav_out fa fa-sign-out"></i>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a href="index"><i class="fa fa-cubes"></i><span class="nav_active_txt nav_tow">总览</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                <li class="nav_active"><i class="fa fa-user"></i><span class="nav_active_txt">开发商</span><span class="fa fa-angle-right"></span>
+                                </li>
+                                <li><a href="service"><i class="fa fa-paste"></i><span class="nav_active_txt nav_tow">服务</span><span class="fa fa-angle-right"></span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+            
+            <!-- top tiles -->
+                <div class="row tile_count">
+                    <div class="animated flipInY col-md-3 col-sm-3 col-xs-3 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <a href="distributors"><span class="count_top">开发商总数</span>
+                            <div class="count txt_align_c">3567</div></a>
+                            
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-md-3 col-sm-3 col-xs-3 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top">当日新增 </span>
+                            <div class="count txt_align_c">35360</div>
+                            
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-md-3 col-sm-3 col-xs-3 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top">本月新增 </span>
+                            <div class="count txt_align_c">2,500</div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="animated flipInY col-md-3 col-sm-3 col-xs-3 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <span class="count_top"> 今年新增 </span>
+                            <div class="count txt_align_c">2,500</div>
+                            
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                
+                <!--f2-->
+              <div class="row">
+
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_kv">
+                            <div class="x_title">
+                                <h2>服务调用总排名（/次）</h2>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>Top 10</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>医药云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>健康云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>市民云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>教育云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_kv">
+                            <div class="x_title">
+                                <h2>服务调用月排名（/次）</h2>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>Top 10</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>医药云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>健康云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>市民云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>教育云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_kv">
+                            <div class="x_title">
+                                <h2>服务调用日排名（/次）</h2>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>Top 10</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>医药云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>健康云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>市民云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>教育云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>食安云</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>2415</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/f2-->
+
+                        
+
+               
+                
+                
+
+
+
+
+
+
+              </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
